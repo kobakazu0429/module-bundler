@@ -1,9 +1,7 @@
 const path = require("path");
 const { promises } = require("fs");
-
 const parser = require("@babel/parser");
 const { default: traverse } = require("@babel/traverse");
-
 const { getScriptFilePath } = require("./pathUtils");
 
 async function bundler(entry) {
