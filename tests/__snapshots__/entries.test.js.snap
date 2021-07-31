@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cjs circularDependency 1`] = `
+Array [
+  Array [
+    "module1:",
+    "from entry",
+  ],
+  Array [
+    "main:",
+    "from module1",
+  ],
+]
+`;
+
+exports[`cjs filename 1`] = `
+Array [
+  Array [
+    "entry",
+  ],
+  Array [
+    "module1",
+  ],
+  Array [
+    "module2",
+  ],
+  Array [
+    "index",
+  ],
+]
+`;
+
+exports[`cjs nested 1`] = `
+Array [
+  Array [
+    "module1",
+  ],
+  Array [
+    "module1-sub",
+  ],
+  Array [
+    "entry",
+  ],
+]
+`;
+
+exports[`cjs node-modules 1`] = `
+Array [
+  Array [
+    "16.13.1",
+  ],
+]
+`;
+
+exports[`cjs simple 1`] = `
+Array [
+  Array [
+    "entry",
+  ],
+  Array [
+    "module1",
+  ],
+  Array [
+    "module2: value",
+  ],
+  Array [
+    "module2: fn",
+  ],
+  Array [
+    "module3",
+    "from module1.js",
+  ],
+  Array [
+    "sep----",
+  ],
+  Array [
+    "module3",
+    "from entry.js",
+  ],
+]
+`;
+
+exports[`common interop 1`] = `
+Array [
+  Array [
+    "---- default.js ----",
+  ],
+  Array [
+    "default from esm",
+  ],
+  Array [
+    "default from cjs",
+  ],
+  Array [
+    "---- default.js ----",
+  ],
+  Array [
+    "hello world from cjs",
+  ],
+  Array [
+    "hello world from esm",
+  ],
+  Array [
+    "default from cjs",
+  ],
+  Array [
+    "default from esm",
+  ],
+]
+`;
+
+exports[`esm complication 1`] = `
+Array [
+  Array [
+    "1. default: named",
+    "named: module2Value",
+  ],
+  Array [
+    "2. default: arguments",
+    "from entry-point",
+  ],
+  Array [
+    "3. default: anonymous",
+    "from module1 from entry-point",
+  ],
+  Array [
+    "4. named: func",
+  ],
+  Array [
+    6,
+  ],
+  Array [
+    "5. module3 value",
+  ],
+  Array [
+    "5. module3 value",
+  ],
+]
+`;
+
+exports[`esm default 1`] = `
+Array [
+  Array [
+    "hi",
+  ],
+]
+`;
+
+exports[`esm import 1`] = `
+Array [
+  Array [
+    "hello world",
+  ],
+]
+`;
+
+exports[`esm namespaceSpecifier 1`] = `
+Array [
+  Array [
+    "hi",
+    "world",
+  ],
+]
+`;
+
+exports[`esm node-modules 1`] = `
+Array [
+  Array [
+    "16.13.1",
+  ],
+  Array [
+    "16.13.1",
+  ],
+]
+`;
+
+exports[`esm simple 1`] = `
+Array [
+  Array [
+    20,
+  ],
+]
+`;
+
+exports[`esm specifier 1`] = `
+Array [
+  Array [
+    "hi",
+    "world",
+  ],
+]
+`;

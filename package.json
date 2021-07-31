@@ -1,0 +1,27 @@
+{
+  "name": "module-bundler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/kobakazu0429/module-bundler.git",
+  "author": "kobakazu0429 <kobakazu10@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "test": "jest",
+    "lint:eslint": "eslint \"./{src,test}/**/*.{js,ts,tsx,svelte}\" --fix",
+    "lint:prettier": "prettier \"./{src,test}/**/*.{js,ts,tsx,svelte}\" --write"
+  },
+  "devDependencies": {
+    "@kobakazu0429/eslint-config-base": "^2.0.3",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.14.8",
+    "@babel/parser": "^7.14.8",
+    "@babel/traverse": "^7.14.8",
+    "@babel/types": "^7.14.8",
+    "prettier": "^2.3.2",
+    "terser": "^5.7.1"
+  }
+}
