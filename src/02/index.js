@@ -1,7 +1,7 @@
 "use strict";
 
 const { existsSync, promises } = require("fs");
-const { dirname, basename, join, } = require("path");
+const { dirname, basename, join } = require("path");
 const { mainTemplate } = require("./template");
 const { buildModulesMap } = require("./buildModulesMap");
 const { convertToModuleId } = require("./convertToModuleId");
@@ -20,7 +20,7 @@ async function bundler({ entry, outputPath }) {
 }
 
 (async () => {
-  const outputDirPath = join(__dirname, "../../output/02")
+  const outputDirPath = join(__dirname, "../../output/02");
   const isOutputDirExists = existsSync(outputDirPath);
   if (!isOutputDirExists) promises.mkdir(outputDirPath, { recursive: true });
 
