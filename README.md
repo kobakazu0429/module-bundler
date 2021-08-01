@@ -8,10 +8,11 @@ and some files(Makefile, tests/) are copied from it.
 
 |dir|description|support|
 |:-|:-|:-:|
-|src/01/|entryファイルからrequireされているファイルを全て列挙|cjs only|
-|src/02/|01のコードを使いつつ1つのファイルにbundle|cjs only|
-|src/03/|01,02のコードを使いつつcjs,esmファイルを1つのファイルにbundle|cjs, esm|
-|src/04/|cjsとesmのinteropを実装|cjs, esm|
+|src/01|entry ファイルから require されているファイルを全て列挙|CommonJS only|
+|src/02|01 のコードを使いつつ1つのファイルに bundle|CommonJS only|
+|src/03|01,02 のコードを使いつつ CommonJS, ES Modules ファイルを 1 つのファイルに bundle|CommonJS, ES Modules|
+|src/04|CommonJS とES Modules のinteropを実装|CommonJS and ES Modules|
+|src/05|terserでminify|CommonJS and ES Modules|
 
 ## Development
 
