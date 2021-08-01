@@ -197,10 +197,6 @@ async function bundler({ entry, outputPath }) {
       join(__dirname, "../../tests/fixtures/common/notFoundModule/entry.js"),
       join(__dirname, "../../output/03/common-notFoundModule.js"),
     ],
-    [
-      join(__dirname, "../../tests/fixtures/common/interop/entry.js"),
-      join(__dirname, "../../output/03/common-interop.js"),
-    ],
   ];
 
   for (const [entry, outputPath] of entries) {
