@@ -1,8 +1,11 @@
 "use strict";
 
-const { dirname } = require("path");
-const { getScriptFilePath, isNodeModule } = require("../../01/pathUtils");
-const { resolveModulePath } = require("../../03/utils/module");
+const { dirname, resolve } = require("path");
+const {
+  getScriptFilePath,
+  getFilename,
+  isNodeModule,
+} = require("../../01/pathUtils");
 
 function getModule(modulesMap, currentModulePath, moduleName, basePath) {
   const filePath = getScriptFilePath(
@@ -13,6 +16,17 @@ function getModule(modulesMap, currentModulePath, moduleName, basePath) {
   return (
     Array.from(modulesMap.values()).find(({ path }) => path === filePath) || {}
   );
+}
+
+function resolveModulePath(modulePath, baseRoot, beforeModulePath) {
+  // reset the current directory when node_modules
+  // ./ has 2 types which are local of the first party and local of the third party module
+  if (isNodeModule(modulePath)) {
+    return getScriptFilePath(baseRoot, modulePath);
+  } else {
+    const nextRoot = dirname(beforeModulePath);
+    return resolve(nextRoot, getFilename(modulePath));
+  }
 }
 
 module.exports = {

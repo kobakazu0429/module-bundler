@@ -190,7 +190,7 @@ function transformAst(entryDir, modulesMap) {
         const assignment = t.variableDeclaration("const", [
           t.variableDeclarator(
             t.identifier(valueName),
-            // bundle can change the ID from require('module')
+            // bundler can change the ID from require('module')
             t.callExpression(t.identifier("require"), [
               t.stringLiteral(importSource),
             ])
