@@ -8,3 +8,4 @@ and some files(Makefile, tests/) are copied from it.
 |:-|:-|:-:|
 |src/01/|entryファイルからrequireされているファイルを全て列挙|cjs only|
 |src/02/|01のコードを使いつつ1つのファイルにbundle|cjs only|
+|src/03/|01,02のコードを使いつつcjs,esmファイルを1つのファイルにbundle(bugあり)|cjs, esm|
